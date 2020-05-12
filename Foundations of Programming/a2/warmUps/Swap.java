@@ -9,7 +9,7 @@ public class Swap {
 		swap(x,y);
 		System.out.println(x +" " + y);
 		//they are not swapped because of the limited scope. 
-		
+		//the changes are limited to swap method thus when it's not called the swapped values dissapears 
 	}
 	public static void swap(int a, int b) {
 		

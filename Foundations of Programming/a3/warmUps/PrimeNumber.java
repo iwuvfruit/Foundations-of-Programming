@@ -1,30 +1,32 @@
 package warmUps;
 
-import java.lang.reflect.Array;
 
 public class PrimeNumber {
 	public static void main(String[] args) {
 		int[] array = firstNPrimes(10);
-		for( int i = 0; i < array.length; i++) {
+		for(int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
+			
 		}
 		
 	}
-	
 	public static int[] firstNPrimes(int n) {
-		int[] inputArray = {};
+		int[] firstPrimes = new int[n];
 		int index = 0;
-		for(int i = 0; i <= n; i++) {
-			for(int j = 0; j < i; j++) {
-				if(i % j == 0) {
-					break;
-				}
-				else {
-					inputArray[index] = i;
-					index ++;
-				}
+		for(int i = 2; i < n; i++) {
+			if (isPrime(i)) {
+				firstPrimes[index] = i;
+				index++;
 			}
 		}
-		return inputArray;
+		return firstPrimes;
+	}
+	public static boolean isPrime(int a) {
+		for(int i = 2; i < a; i++) {
+			if(a % i == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

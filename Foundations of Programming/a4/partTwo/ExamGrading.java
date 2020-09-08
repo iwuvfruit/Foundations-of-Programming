@@ -63,9 +63,25 @@ public class ExamGrading {
 		
 		
 	}
-	//ToDo
-	public static int[][] findSimilarAnswers(int minFlagged, char[][] responses, char[] soln) {
-		return null;
+	public static int[][] findSimilarAnswers(int minNr, char[][] response, char[] solution) {
+		int count = 0;
+		int[][] similarAnswers = new int[4][];
+		for(int i = 0; i < response.length; i++) {
+			int nrMatch = numMatches(response, solution, i, minNr);
+			for(int j = 0; j < response.length; j++) {
+				if(i != j) {
+					int index = 0;
+					int[] similar = new int[nrMatch];
+					int nr = numWrongSimilar(response[i], response[j], solution);
+					if(nr >= minNr) {
+						similar[index] = j;
+						index++;
+					}
+					similarAnswers[count] = similar;
+				}
+			}
+		}
+		return similarAnswers;
 	}
 }
 

@@ -1,4 +1,5 @@
 # Foundations-of-Programming
+
 COMP202 @McGill
 
 Fairly Easy problems. 
@@ -6,9 +7,15 @@ Easier than leetcode easy problems.
 
 I 100% made it mine. I can 100% solve all again without any help. 
 
-What I learnt
-From A1)  
-public static void main(String[] args):  args[0] means the first of given argument. not the file name. also note that it's type is String[]. To use it as int, must parse int such that int a = Integer.parseInt(args[0]);
+
+---
+
+## What I learnt
+
+#### From A1)  
+public static void main(String[] args):
+args[0] means the first of given argument. not the file name. also note that it's type is String[]. 
+To use it as int, must parse int such that int a = Integer.parseInt(args[0]);
 
 when providing arguments to run configuration, format it this way:
 "5"
@@ -18,7 +25,9 @@ when providing arguments to run configuration, format it this way:
 
 Always test your code. check my test Case , expected outputs, actual outputs  =>repeat. 
 
-From A2)
+---
+
+#### From A2)
 after method is done, the stack is removed. the change is unsaved if not returning. 
 
 to generate a random value: 
@@ -37,7 +46,8 @@ import java.util.Scanner;
 if x is point or x is 7 then get out of the loop:
 while(x != point && x != 7) {//this makes sense if x is 7 then stop the loop, same for if x is point.  that means if one of them is false then stop the loop. thus and, not or.
 
-From A3)
+--
+#### From A3)
 when reversing, instead of just creating a new string and loop through to insert one by one we can use two pointers method::
 //strings are immutable so how are we going to mutate it?
 	  //we can turn it into array which is mutable then use two pointers method 
@@ -98,7 +108,8 @@ then I ++
 ====> smarter way would be just using %. 
 int index = x % keyword.length();
 
-From A4)
+---
+#### From A4)
 multi dimensional array ==> int[][] ==> {{1,23},{45,6},{77,21}}
 for each loop: https://stackoverflow.com/questions/63759424/for-each-and-for-loop-same-functionality?noredirect=1#comment112748600_63759424
 static/non-static:
